@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 function Header() {
   return (
     <header className="primary-header flex" id="home">
@@ -21,16 +21,16 @@ function Header() {
         </label>
         <ul className="navigation flex">
           <li>
-            <a href="#skills">Skills</a>
+            <Link to={"/skills"}>Skills</Link>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <Link to="/projects">Projects</Link>
           </li>
           <li>
-            <a href="#about">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>

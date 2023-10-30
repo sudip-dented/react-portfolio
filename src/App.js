@@ -9,30 +9,33 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
 import "./style.scss";
+import {Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
       <div className="wrapper">
-        {/* <!-- header --> */}
-        <Header />
+        <Routes>
+          <Route path="/" element={<Hero />}></Route>
+          <Route path="/hero" element={<Hero />}></Route>
+          <Route path="/skills" element={<Hero />}></Route>
+          <Route path="/projects" element={<Skills />}></Route>
+          <Route path="/about" element={<AboutMe />}></Route>
+        </Routes>
 
-        {/* <!-- hero --> */}
-        <Hero />
-        {/* <!-- banner --> */}
-        <Banner />
-        {/* <!-- skills --> */}
-        <Skills />
-        {/* projects --> */}
-        <Projects />
+        {/* <Header /> */}
+        {/* <Hero /> */}
+        {/* <Banner /> */}
 
-        {/* <!-- About Me --> */}
-        <AboutMe />
-        {/* <!-- contact --> */}
+        {/* <Skills /> */}
 
-        <Contacts />
-        {/* <!-- footer --> */}
-        <Footer />
+        {/* <Projects /> */}
+
+        {/* <AboutMe /> */}
+
+        {/* <Contacts /> */}
+
+        {/* <Footer /> */}
       </div>
     </>
   );
